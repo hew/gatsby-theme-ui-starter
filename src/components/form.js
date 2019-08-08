@@ -18,15 +18,14 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required!"),
-  school: Yup.string().required("School is required"),
   city: Yup.string().required("City is required"),
   privacy: Yup.bool()
     .test(
       "privacy",
-      "You have to read and agree with QUP's privacy policy!",
+      "You have to read and agree to the privacy policy!",
       value => value === true
     )
-    .required("You have to read and agree with QUP's privacy policy!"),
+    .required("You have to read and agree to the privacy policy!"),
 })
 
 const checkboxSize = {
@@ -113,23 +112,23 @@ export default () => {
                   />
                 </Box>
                 <Box>
-                  <P f={0} color={"white"} style={{ fontSize: "14px" }}>
+                  <P f={0} color="white" style={{ fontSize: "14px" }}>
                     I have read and agree with the privacy policy.
                   </P>
-                  <div>{errors.privacy}</div>
+                  <div><P color="text">{errors.privacy}</P></div>
                 </Box>
               </Flex>
               <Button type="submit" mb={2} disabled={isSubmitting}>
                 Register
               </Button>
             </Form>
-            <P f={0} color={"white"}>
+            <P f={0} color="white">
               I understand that I can withdraw my consent at any time and the
               withdrawal will not affect the lawfulness of the consent before
               its withdrawal, as described in the {" "}
               <Styled.a
                 sx={{ color: "secondary" }}
-                href=""
+                href="/privacy"
               >
                 Privacy Policy
               </Styled.a>
