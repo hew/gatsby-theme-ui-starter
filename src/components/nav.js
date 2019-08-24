@@ -11,7 +11,7 @@ export default () => (
       <Flex flex={1} />
       <Flex>
         <a href="https://hummus.com">
-          <Button mb={2}>Action</Button>
+          <Button mb={2}>Link</Button>
         </a>
       </Flex>
     </Flex>

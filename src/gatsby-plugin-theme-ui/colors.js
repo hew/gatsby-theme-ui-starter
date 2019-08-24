@@ -1,14 +1,13 @@
-const purple = "#5d0dff"
-const pink = "#ff70b3"
+const blue = "#28536C"
+const orange = "#AA5439"
 const white = "#fff"
-const purpleDark = "#4400ce"
 const gray = "#5b656d"
 
 export default {
-  primary: purple,
-  secondary: pink,
+  primary: blue,
+  secondary: orange,
   text: gray,
   textWhite: white,
-  background: purple,
-  backgroundDark: purpleDark
+  background: blue,
+  backgroundDark: gray
 }
